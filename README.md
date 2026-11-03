@@ -2,9 +2,11 @@
 
 A native menu bar app that watches for hardware activity while you are away from your Mac. It can request the macOS lock screen and save a local incident when a selected trigger fires.
 
-**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.1-18-arm64.zip)**
+**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.0-17-arm64.zip)**
 
 Requires an M1 or newer Mac and macOS 14 or later. Local Mac protection needs no account or subscription.
+
+Known issue in 0.3.0 build 17: the production iCloud capability used by iPhone guard controls was omitted from packaging. Local Mac guarding and paired remote desktop still work. A corrected 0.3.1 package is being prepared.
 
 ## Install
 
