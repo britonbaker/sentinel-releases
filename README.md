@@ -2,13 +2,13 @@
 
 A native menu bar app that watches for hardware activity while you are away from your Mac. It can request the macOS lock screen and save a local incident when a selected trigger fires.
 
-**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.2.0-2-arm64.dmg)**
+**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.0-17-arm64.zip)**
 
-Requires an M1 or newer Mac and macOS 14 or later. No account or subscription.
+Requires an M1 or newer Mac and macOS 14 or later. Local Mac protection needs no account or subscription.
 
 ## Install
 
-1. Open the downloaded disk image.
+1. Unzip the downloaded archive.
 2. Drag **ScreenSentinel** onto **Applications**.
 3. Open it from Applications. Its setup window walks through **Input Monitoring** and **Accessibility**.
 4. Click the shield in the menu bar and choose **Test detection**. Check the hinge angle and physical-input counter before arming.
@@ -25,10 +25,16 @@ For a first lock test, save your work, keep the lid open, arm, wait for the coun
 
 Optional camera clips start **after** a trigger and stay on your Mac. There is no continuous recording or pre-event buffer. Audio is separately enabled. Capture through lock/sleep is best effort, and a closed lid can block the camera or disable the microphone.
 
+## iPhone and remote desktop
+
+The optional iPhone companion is in private TestFlight testing. Enable paired remote desktop in the Mac's Sentinel setup and allow Screen Recording when requested, then paste its pairing code into the phone app. A paired phone can control the existing desktop while the Mac is unlocked. Locking, sleep or a user switch ends access.
+
+Trackpad mode starts automatically. One finger moves the cursor, a tap clicks, two fingers slide to scroll or tap to right-click, and a deliberate pinch zooms the view. Other controls are in the ellipsis menu. A subtle menu-bar dot and panel status show an active connection. Away access currently requires a reachable private network such as Tailscale on both devices.
+
 ## Updates and verification
 
 **Check for Updates** is in Settings. Updates wait for guarding, recording, and closed-lid work to finish before restarting.
 
-The app and disk image are Developer ID signed and Apple notarized. The ZIP used by the updater also has an Ed25519 signature. [Release assets and checksums](https://github.com/britonbaker/sentinel-releases/releases/latest) are public; source code, preferences and recordings are not included.
+The app is Developer ID signed and Apple notarized. The ZIP used by the updater also has an Ed25519 signature. [Release assets and checksums](https://github.com/britonbaker/sentinel-releases/releases/latest) are public; source code, preferences and recordings are not included.
 
 This is an early preview. Signing, notarization, and local regression checks do not establish hardware behavior on every Mac. Test detection and one lock on your own Mac before relying on it.
