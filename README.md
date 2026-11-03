@@ -2,7 +2,7 @@
 
 A native menu bar app that watches for hardware activity while you are away from your Mac. It can request the macOS lock screen and save a local incident when a selected trigger fires.
 
-**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.0-17-arm64.zip)**
+**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.1-18-arm64.zip)**
 
 Requires an M1 or newer Mac and macOS 14 or later. Local Mac protection needs no account or subscription.
 
@@ -30,6 +30,8 @@ Optional camera clips start **after** a trigger and stay on your Mac. There is n
 The optional iPhone companion is in private TestFlight testing. Enable paired remote desktop in the Mac's Sentinel setup and allow Screen Recording when requested, then paste its pairing code into the phone app. A paired phone can control the existing desktop while the Mac is unlocked. Locking, sleep or a user switch ends access.
 
 Trackpad mode starts automatically. One finger moves the cursor, a tap clicks, two fingers slide to scroll or tap to right-click, and a deliberate pinch zooms the view. Other controls are in the ellipsis menu. A subtle menu-bar dot and panel status show an active connection. Away access currently requires a reachable private network such as Tailscale on both devices.
+
+To arm or disarm from the iPhone in the current beta, enable iPhone sync and **Allow controls from iPhone** in the Mac's Sentinel settings, using the same Apple Account. Remote desktop pairing alone currently enables screen access rather than guard controls.
 
 ## Updates and verification
 
