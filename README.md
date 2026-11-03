@@ -2,11 +2,9 @@
 
 A native menu bar app that watches for hardware activity while you are away from your Mac. It can request the macOS lock screen and save a local incident when a selected trigger fires.
 
-**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.0-17-arm64.zip)**
+**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.1-21-arm64.zip)**
 
 Requires an M1 or newer Mac and macOS 14 or later. Local Mac protection needs no account or subscription.
-
-Known issue in 0.3.0 build 17: the production iCloud capability used by iPhone guard controls was omitted from packaging. Local Mac guarding and paired remote desktop still work. A corrected 0.3.1 package is being prepared.
 
 ## Install
 
@@ -26,6 +24,14 @@ Selected physical input, USB attachment, wake, or hinge movement of 2 degrees or
 For a first lock test, save your work, keep the lid open, arm, wait for the countdown to finish, then move the lid by at least 3 degrees. Sign back in and check the incident. The hinge sensor is hardware-dependent; if unavailable, disable that trigger in Settings and test the supported input/USB triggers instead.
 
 Optional camera clips start **after** a trigger and stay on your Mac. There is no continuous recording or pre-event buffer. Audio is separately enabled. Capture through lock/sleep is best effort, and a closed lid can block the camera or disable the microphone.
+
+## Mac-to-Mac remote desktop
+
+Choose **Open another Mac** in Sentinel Settings, then **Pair a Mac**. Copy the code from **Set up remote desktop** on the other Mac and paste it into the single code field. Pairings stay in this Mac's Keychain. No iCloud account is required for paired desktop access.
+
+Choose **Open desktop** to use its regular desktop in a resizable or full-screen window with mouse, keyboard and scrolling. The remote Mac must be unlocked and have paired desktop access approved. **Mac sign-in** in the viewer's options retains the existing macOS Screen Sharing sign-in path. Locking this Mac closes its outgoing viewers; remote input does not disable physical protection on the target Mac. Away access uses Tailscale on both Macs.
+
+The Mac viewer passed generated-desktop loopback checks; a connection between the owner's two physical Macs and an away-network test remain unverified.
 
 ## iPhone and remote desktop
 
