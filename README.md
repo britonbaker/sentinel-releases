@@ -2,7 +2,7 @@
 
 A native menu bar app that watches for hardware activity while you are away from your Mac. It can request the macOS lock screen and save a local incident when a selected trigger fires.
 
-**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.1-21-arm64.zip)**
+**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.1-30-arm64.zip)**
 
 Requires an M1 or newer Mac and macOS 14 or later. Local Mac protection needs no account or subscription.
 
@@ -13,7 +13,7 @@ Requires an M1 or newer Mac and macOS 14 or later. Local Mac protection needs no
 3. Open it from Applications. Its setup window walks through **Input Monitoring** and **Accessibility**.
 4. Click the shield in the menu bar and choose **Test detection**. Check the hinge angle and physical-input counter before arming.
 
-If macOS asks you to quit and reopen after granting access, do that and reopen setup. Camera, microphone and the closed-lid helper are optional; they are not required to start guarding.
+Setup refreshes its permission status when you return from System Settings. If Accessibility is enabled but setup still says **Allow locking**, fully quit Sentinel and reopen it from **Applications**. Recognized permissions show **Allowed**; **Ready to arm** appears after the remaining checks pass. Granting permission does not arm or lock the Mac. If macOS asks you to quit and reopen after granting access, do that and reopen setup. Camera, microphone and the closed-lid helper are optional; they are not required to start guarding.
 
 ## Use
 
