@@ -2,7 +2,7 @@
 
 A native menu bar app that watches for hardware activity while you are away from your Mac. It can request the macOS lock screen and save a local incident when a selected trigger fires.
 
-**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.1-30-arm64.zip)**
+**[Download Sentinel for Apple silicon](https://github.com/britonbaker/sentinel-releases/releases/latest/download/Sentinel-0.3.1-49-arm64.zip)**
 
 Requires an M1 or newer Mac and macOS 14 or later. Local Mac protection needs no account or subscription.
 
@@ -11,13 +11,15 @@ Requires an M1 or newer Mac and macOS 14 or later. Local Mac protection needs no
 1. Unzip the downloaded archive.
 2. Drag **ScreenSentinel** onto **Applications**.
 3. Open it from Applications. Its setup window walks through **Input Monitoring** and **Accessibility**.
-4. Click the shield in the menu bar and choose **Test detection**. Check the hinge angle and physical-input counter before arming.
+4. Click the antenna in the menu bar and choose **Test detection**. Check the hinge angle and physical-input counter before arming.
 
 Setup refreshes its permission status when you return from System Settings. If Accessibility is enabled but setup still says **Allow locking**, fully quit Sentinel and reopen it from **Applications**. Recognized permissions show **Allowed**; **Ready to arm** appears after the remaining checks pass. Granting permission does not arm or lock the Mac. If macOS asks you to quit and reopen after granting access, do that and reopen setup. Camera, microphone and the closed-lid helper are optional; they are not required to start guarding.
 
 ## Use
 
 Choose **Arm**. The button counts down for 10 seconds so you can leave the Mac in position. The default duration is **Until stopped**.
+
+**Stay Awake** has one menu for **Until Stopped**, **30 minutes**, **1 hour**, or **2 hours**. The same menu includes **With Lid Closed** and **Stop Staying Awake**. Ordinary Stay Awake is available on battery; closed-lid work requires external power, the approved helper, at least 15% battery, and a safe temperature. Stopping Stay Awake leaves an active guard armed.
 
 Selected physical input, USB attachment, wake, or hinge movement of 2 degrees or more can trigger it. Sentinel saves an incident, disarms, then requests the lock screen. Sign in, acknowledge the incident, and arm again when ready. It does not rearm itself.
 
